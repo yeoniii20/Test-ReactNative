@@ -19,8 +19,6 @@ const Login = ({ navigation }) => {
         display: "flex",
         flexDirection: "column",
         backgroundColor: "#FFFBF6",
-        // height: 812,
-        // width: 375,
       }}
     >
       <Image
@@ -32,7 +30,6 @@ const Login = ({ navigation }) => {
       />
       <Text
         style={{
-          fontFamily: "SUITE",
           fontSize: 20,
           fontWeight: 500,
           color: "#1F1F1F",
