@@ -17,14 +17,13 @@ export default function App() {
     <View>
       {/* <Login /> */}
       {/* <SiginUp /> */}
-      {/* <Statistics /> */}
+      <Statistics />
       {/* <Note /> */}
       {/* <Bottom /> */}
       {/* <Top /> */}
       {/* <Bar /> */}
       {/* <Message /> */}
       {/* <FriendsList /> */}
-      <TestPage />
     </View>
   );
 }

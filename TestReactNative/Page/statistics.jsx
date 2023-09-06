@@ -1,46 +1,60 @@
-import React from "react";
-import { View, Text } from "react-native";
-import Top from "../components/Top";
+import React, { useState } from "react";
+import { View, Text, TextInput, Button, Alert, Image } from "react-native";
 import Bottom from "../components/Bottom";
-import Bar from "../components/Bar";
+import Top from "../components/Top";
 
-const Statistics = () => {
+const FriendsList = () => {
   return (
-    <View style={{ flex: 1, backgroundColor: "#FFFBF6" }}>
+    <View
+      style={{
+        flexDirection: "column",
+        backgroundColor: "#FFFBF6",
+      }}
+    >
       <Top />
-      {/* 중간 콘텐츠 */}
       <View style={{ flex: 1 }}>
         <View
           style={{
-            flexDirection: "row",
-            justifyContent: "center",
-            alignItems: "center",
-            marginVertical: 25,
-            marginHorizontal: 116,
+            flexDirection: "column",
+            marginTop: 25,
+            marginBottom: 40,
+            paddingLeft: 28,
           }}
         >
-          <Text style={{ fontSize: 20, fontWeight: "bold", color: "#1F1F1F" }}>
-            지출 통계
+          <Text
+            style={{
+              fontSize: 22,
+              fontWeight: 700,
+              color: "#1F1F1F",
+              textAlign: "center",
+              marginBottom: 24,
+            }}
+          >
+            친구 목록
           </Text>
-          <Text style={{ fontSize: 20, fontWeight: "bold", color: "#5C5C5C" }}>
-            지출 내역
+          <Text style={{ fontSize: 20, fontWeight: 700, color: "#1F1F1F" }}>
+            대결중인 친구
           </Text>
+          <View
+            style={{
+              width: "100%",
+              height: 2,
+              background: "grey",
+            }}
+          />
+          <View style={{ flex: 1 }}>
+            <Image source={require("../assets/friendIcon.svg")} />
+            <Text style={{ fontSize: 16, fontWeight: 500, color: "#1F1F1F" }}>
+              친구1
+            </Text>
+            <Image source={require("../assets/friendIcon.svg")} />
+            <Image source={require("../assets/winnerIcon.svg")} />
+          </View>
         </View>
-        <View style={{ flexDirection: "row", width: "100%" }}>
-          <View style={{ flex: 1, height: 1.5, backgroundColor: "#1F1F1F" }} />
-          <View style={{ flex: 1, height: 1.5, backgroundColor: "#5C5C5C" }} />
-        </View>
-        <Bar text={"의류"} path={require("../assets/shirt.svg")} />
-        <View style={{ flex: 1, height: 1.5, backgroundColor: "#1F1F1F" }} />
-        <Bar text={"식생활"} path={require("../assets/food.svg")} />
-        <View style={{ flex: 1, height: 1.5, backgroundColor: "#1F1F1F" }} />
-        <Bar text={"주거"} path={require("../assets/home.svg")} />
-        <View style={{ flex: 1, height: 1.5, backgroundColor: "#1F1F1F" }} />
-        <Bar text={"기타"} path={require("../assets/etc.svg")} />
       </View>
       <Bottom />
     </View>
   );
 };
 
-export default Statistics;
+export default FriendsList;
